@@ -4,13 +4,14 @@
 
 ```
 ml_test/
-├── data/mini_gm_public_v0.1.p   # dataset (não versionado)
+├── data/mini_gm_public_v0.1.p   # dataset
 ├── src/
 │   ├── data_processing.py       # carga + sanidade + EDA (encadeia o resto)
 │   ├── data_visualization.py    # t-SNE 2D
 │   ├── data_classification.py   # KNN + validação cruzada
 │   └── data_metrics.py          # AUC/F1/top-k na mão + espelho sklearn
 ├── outputs/                     # CSVs, figuras e npz gerados
+├── .gitignore
 ├── architecture.md
 ├── requirements.txt
 └── README.md
@@ -58,5 +59,5 @@ Implementadas em `src/data_metrics.py` (lê o npz, não re-treina):
 
 ## Reprodutibilidade
 - Seeds fixas no t-SNE e nos splits.
-- Scripts `.py` standalone; Jupyter é proibido pelo enunciado.
+- Scripts `.py` standalone, sem notebooks.
 - Dependências em `requirements.txt`, tiradas dos imports reais de `src/`.
