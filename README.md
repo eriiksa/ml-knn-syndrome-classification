@@ -1,5 +1,7 @@
 # Teste ML — Apollo Solutions
 
+> You are being hired by a fictional biotech company specializing in genetic research. The task involves analyzing embeddings derived from images to classify genetic syndromes. These embeddings are outputs from a pre-trained classification model. The company wants to improve its understanding of the data distribution and enhance the classification accuracy of genetic syndromes based on these embeddings.
+
 Classificação de `syndrome_id` a partir de embeddings de imagem (320 dimensões).
 
 Dataset no formato `syndrome_id -> subject_id -> image_id -> vetor(320)`. Achatando, cada imagem vira uma linha de `X` (1116 x 320) e os rótulos ficam no `meta`. São 10 síndromes, 941 sujeitos e desbalanceamento de 3,28x entre a maior e a menor.
@@ -7,10 +9,11 @@ Dataset no formato `syndrome_id -> subject_id -> image_id -> vetor(320)`. Achata
 ## Como executar
 
 ```powershell
-cd C:\Users\erikf\OneDrive\Desktop\Projetos\ml_test
 pip install -r requirements.txt
 python src\data_processing.py
 ```
+
+O dataset já vem no repo, em `data\mini_gm_public_v0.1.p`.
 
 Rodar o `data_processing.py` já encadeia o resto na ordem certa (t-SNE → KNN → métricas), então esse comando é o suficiente. Cada script também roda sozinho se precisar (`python src\data_classification.py`), mas a ordem importa: o `data_classification.py` gera o `outputs/oof_scores.npz` que o `data_metrics.py` lê.
 
