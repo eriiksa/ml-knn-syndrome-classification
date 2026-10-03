@@ -56,4 +56,4 @@ Ordem das aulas baseada na ordem que implementei:
 
   Base pro F1 macro e pra ler a matriz de confusão.
 
-- **T-SNE:** documentação do scikit-learn — https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
+- **T-SNE:** documentação do scikit-learn — <https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html>
