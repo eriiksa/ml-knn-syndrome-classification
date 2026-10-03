@@ -1,0 +1,16 @@
+# Dependencias do teste Apollo Solutions - ML Developer
+# Instalar com:  pip install -r requirements.txt
+# Python 3.10+ (validado em Python 3.14)
+#
+# Derivado dos imports reais em src/:
+#   numpy        -> src/data_processing.py, src/data_visualization.py
+#   pandas       -> src/data_processing.py, src/data_visualization.py
+#   scikit-learn -> src/data_visualization.py, src/data_classification.py
+#   matplotlib   -> src/data_visualization.py
+# (scipy nao e importado diretamente em src/; entra apenas como dependencia
+#  transitiva do scikit-learn.)
+
+numpy>=2.0
+pandas>=2.2
+scikit-learn>=1.5
+matplotlib>=3.8
